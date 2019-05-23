@@ -1,0 +1,12 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/fondo6.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+  }
+img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}

@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    //
+      es equivalente a este link:     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+    
+    link(rel="stylesheet", href="../css/contactos.css")
+
+    title Workshop2
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      a.navbar-brand.text-warning StarWars
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='peliculas') Películas
+          li.nav-item
+            a.nav-link(href='planetas') Planetas
+          li.nav-item
+            a.nav-link(href='contactos') Contactos
+    h2(style='text-align: center; margin-top: 100px' class="text-warning") Contacto
+    div(style='margin: auto; width: 90%; padding: 50px')
+      div
+      form
+        .form-row
+          .form-group.col-md-6
+            input#inputName.form-control(type='text', placeholder='Nombre')
+          .form-group.col-md-6
+            input#inputEmail.form-control(type='text', placeholder='E-mail')
+          .form-group.col-md-12(style='display: flex; flex-direction: column-reverse')
+            button#sendButton.btn.btn-secondary(type='button') Enviar
+          .form-group.col-md-12
+          small#nameError.text-danger.bg-dark
+          .form-group.col-md-12
+          small#emailError.text-danger.bg-dark
+          p#enviadoOk.text-success.bg-dark
+      #myAlert.alert.alert-success.collapse(role='alert')
+        a#linkClose.close(herf='#') ×
+        strong Gracias!
+        |  Su información ha sido enviada correctamente.
+      div
+        img.mx-auto.d-block(src='../img/star-wars.gif', alt='')
+    script(src='js/contactos.js')
